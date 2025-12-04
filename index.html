@@ -1,37 +1,66 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-    
-  reviewport content="width=device-width, initial-scale=1.0">
-    <link l="icon" type="image/x-icon" href="img/favicon.png">
-   <link rel="stylesheet" href="style.css">
-   <title>DEMO AZAR (BLAZE) </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JOGO DEMO DE SORTE OU AZAR</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="app">
+    <header class="topbar">
+      <h1>SORTE OU AZAR</h1>
+      <div class="hud">
+        <div class="badge">Saldo: <span id="balance">1000000
+        </span></div>
+        <div class="badge">Aposta: <span id="currentBet">10</span></div>
+      </div>
+    </header>
 
-  <div class="panel">
- <h1>JOGO MINES(BLAZE) SORTE OU AZAR</h1>
-  <div class="controls">
-    <select id="sizeSelect">
-        <option value="5">5x5</option>
-        <option value="6">6x6</option>
-      </select>
+    <main class="main">
+      <section class="controls">
+        <label>
+          Grade
+          <select id="sizeSelect">
+            <option value="5">5×5</option>
+            <option value="6">6×6</option>
+           
+          </select>
+        </label>
 
+        <label>
+          Minas
+          <select id="minesSelect">
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="9">9</option>
+            <option value="12">12</option>
+            <option value="24">24</option>
+          </select>
+        </label>
+
+        <label>
+          Aposta
+          <input id="betInput" type="number" min="1" value="10">
+        </label>
+
+        <button id="startBtn" class="btn primary">Nova Partida</button>
+        <button id="cashoutBtn" class="btn secondary">Coletar</button>
+      </section>
+
+      <section class="board-wrap">
+        <div id="board" class="grid"></div>
+        <div id="log" class="log">Clique em "Nova Partida" para começar.</div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>o dinheiro não é real</small>
+    </footer>
   </div>
 
-
-
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio odit ut consectetur? Modi quaerat itaque
-    inventore at. Aliquid impedit sed dignissimos, delectus inventore cumque fuga aspernatur, voluptatum quam iusto
-    fugit?
-
+  <script src="script.js"></script>
 </body>
-
- <script src="script.js"></script>
- 
-
 </html>

@@ -1,4 +1,4 @@
-let size = 5, mines = 3, bet = 10, balance = 1000;
+let size = 5, mines = 3, bet = 10, balance = 1000000;
 let board = [], revealed = 0, active = false;
 
 const $ = id => document.getElementById(id);
@@ -42,7 +42,7 @@ function render() {
         el.classList.add("revealed");
         if (cell.mine) {
           el.classList.add("mine");
-          el.textContent = "💥";
+          el.textContent = "💣";
         }
       }
 
